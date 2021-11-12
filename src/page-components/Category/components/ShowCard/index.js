@@ -17,13 +17,16 @@ function ShowCard({
         transparent={false}
         text={title}
         linesToShow={1}
+        lineHeight={2.5}
+        mb="s"
+        mt="s"
       />
       <Paragraph
         variant="m"
         transparent
         text={description}
         linesToShow={3}
-        lineHeight={1}
+        lineHeight={1.1}
       />
     </Flex>
   );
