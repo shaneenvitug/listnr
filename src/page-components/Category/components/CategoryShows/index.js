@@ -3,7 +3,7 @@ import Paragraph from 'shared-components/Typography/Paragraph';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyledBox, StyledCategoryShows, TextWrapper } from './styled';
-
+import ShowCard from '../ShowCard';
 function CategoryShows({ shows, description }) {
   return (
     <StyledCategoryShows>
@@ -16,6 +16,15 @@ function CategoryShows({ shows, description }) {
           )}
         </StyledBox>
       </Flex>
+      {shows.map(show => (
+        <ShowCard
+          key={show.id}
+          title={show.name}
+          description={show.description}
+          images={show.images}
+        />
+      ))
+      }
     </StyledCategoryShows>
   );
 }
