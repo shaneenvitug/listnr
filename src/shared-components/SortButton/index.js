@@ -4,7 +4,7 @@ import React from 'react';
 import { arrayOf, shape, string, func, oneOf } from 'prop-types';
 import { DropDownIcon, StyledButton } from './styled';
 
-function SortButton({ onOptionClick, side, options }) {
+function SortButton({ onOptionClick, side, options, sortOrder }) {
   const offsetX = side === 'left' ? '16px' : '-130px';
   return (
     <DropdownButton
@@ -20,7 +20,7 @@ function SortButton({ onOptionClick, side, options }) {
       setIconRight
     >
       {options.map(item => (
-        <StyledButton key={item.key}>
+        <StyledButton key={item.key} isActive={sortOrder === item.key}>
           <Button
             as="button"
             variant="secondary"
@@ -44,10 +44,12 @@ SortButton.propTypes = {
       value: string,
     }),
   ).isRequired,
+  sortOrder: string,
 };
 
 SortButton.defaultProps = {
   side: 'left',
+  sortOrder: null,
 };
 
 export default SortButton;

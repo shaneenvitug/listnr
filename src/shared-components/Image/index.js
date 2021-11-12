@@ -6,6 +6,7 @@ import styled, { css } from 'styled-components';
 const StyledImage = styled.img`
 opacity: 0;
 transition: opacity 1s;
+border-radius: 15px;
 ${props => (props.imageReady && css`
   opacity: 1;
 `)};

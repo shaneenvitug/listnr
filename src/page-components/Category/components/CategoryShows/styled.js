@@ -31,3 +31,18 @@ export const TextWrapper = styled.div`
     margin-bottom: 0;
   }
 `;
+
+export const ShowCardWrapper = styled.section`
+  display: grid;
+  grid-gap: 30px 15px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+
+  ${screen.tablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  ${screen.laptop} {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+`;

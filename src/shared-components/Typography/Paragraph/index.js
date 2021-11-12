@@ -53,7 +53,8 @@ const fontSizeEllipsis = ({ mobile, desktop }) => css`
   font-size: ${mobile};
   line-height: ${props => props.lineHeight};
   -webkit-line-clamp: ${props => props.linesToShow};
-
+  height: 100%;
+  
   ${screen.tablet} {
     max-height: calc(${desktop} * ${props => props.lineHeight} * ${props => props.linesToShow} ); /* Fallback for non-webkit */
     font-size: ${desktop};
