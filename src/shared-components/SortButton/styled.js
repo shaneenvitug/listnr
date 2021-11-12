@@ -11,6 +11,6 @@ export const StyledButton = styled.div`
   button {
       border :none;
       border-radius: 0;
-      background: transparent;
+      background: ${props => (props.isActive ? props.theme.primaryActive : 'transparent')};
   }
 `;
